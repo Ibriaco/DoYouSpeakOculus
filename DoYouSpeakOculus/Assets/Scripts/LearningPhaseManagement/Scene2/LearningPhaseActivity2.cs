@@ -51,7 +51,7 @@ public class LearningPhaseActivity2 : LearningPhaseManager {
                     //candSManager.EnableOutline(secondAnimal);
                     yield return candSManager.IntroduceObjectWithComparatives(firstAnimal, secondAnimal);
                     //candSManager.DisableOutline(firstAnimal);
-                   // candSManager.DisableOutline(secondAnimal);
+                    //candSManager.DisableOutline(secondAnimal);
                     yield return new WaitForSeconds(0.5f);
                 }
                     
@@ -68,7 +68,7 @@ public class LearningPhaseActivity2 : LearningPhaseManager {
     private IEnumerator IntroduceObject(string objectKey) {
         //candSManager.EnableOutline(objectKey);
         yield return candSManager.IntroduceObject(objectKey);
-       // candSManager.DisableOutline(objectKey);
+        //candSManager.DisableOutline(objectKey);
     }
 
     private void DisplayInlineObjects() {

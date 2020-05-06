@@ -18,29 +18,29 @@ public class Positions {
 
     public static readonly float FrontDistance = -0.9f;
 
-    public static readonly Vector3 Central = new Vector3(0, 2, FrontDistance + 1.2f);
-    public static readonly Vector3 AsideLeft = new Vector3(-0.2f, 2, FrontDistance + 1);
-    public static readonly Vector3 AsideRight = new Vector3(0.2f, 2, FrontDistance + 1);
+    public static readonly Vector3 Central = new Vector3(0, 0.1f, FrontDistance + 1.2f);
+    public static readonly Vector3 AsideLeft = new Vector3(-0.2f, 0.1f, FrontDistance + 1);
+    public static readonly Vector3 AsideRight = new Vector3(0.2f, 0.1f, FrontDistance + 1);
 
     //  Scene 2
-    public static readonly Vector3 ArkPosition = new Vector3(0.018f, 2, 0.6f);
-    public static readonly Vector3 startPositionInlineThree = new Vector3(-0.1f, 2, 0.1f);
+    public static readonly Vector3 ArkPosition = new Vector3(0.018f, 0.1f, 0.6f);
+    public static readonly Vector3 startPositionInlineThree = new Vector3(-0.1f, 0.1f, 0.1f);
 
     //Scene 3
-    public static readonly Vector3 TreePosition = new Vector3(0, 2, FrontDistance + 1.6f);
-    public static readonly Vector3 HousePosition = new Vector3(-0.7f, 2, FrontDistance + 1.7f);
-    public static readonly Vector3 Character1Position = new Vector3(-0.375f, 2, FrontDistance + 1.1f);
-    public static readonly Vector3 Character1Basket = new Vector3(-0.375f, 2, FrontDistance + 0.95f);
-    public static readonly Vector3 Character2Position = new Vector3(0.375f, 2, FrontDistance + 1.1f);
-    public static readonly Vector3 Character2Basket = new Vector3(0.375f, 2, FrontDistance + 0.9f);
-    public static readonly Vector3 VAPosition = new Vector3(-0.4f, 2, FrontDistance + 0.7f);
+    public static readonly Vector3 TreePosition = new Vector3(0, 0.1f, FrontDistance + 1.6f);
+    public static readonly Vector3 HousePosition = new Vector3(-0.7f, 0.085f, FrontDistance + 1.7f);
+    public static readonly Vector3 Character1Position = new Vector3(-0.375f, 0.1f, FrontDistance + 1.1f);
+    public static readonly Vector3 Character1Basket = new Vector3(-0.375f, 0.1f, FrontDistance + 0.95f);
+    public static readonly Vector3 Character2Position = new Vector3(0.375f, 0.1f, FrontDistance + 1.1f);
+    public static readonly Vector3 Character2Basket = new Vector3(0.375f, 0.1f, FrontDistance + 0.9f);
+    public static readonly Vector3 VAPosition = new Vector3(-0.4f, 0.1f, FrontDistance + 0.7f);
 
     //  Default position for non active objects
-    public static readonly Vector3 hiddenPosition = new Vector3(0, 2, FrontDistance - 3);
+    public static readonly Vector3 hiddenPosition = new Vector3(0, 0.1f, FrontDistance - 3);
 
     //  Start position for spawning 4 objects aligned in scene1
-    public static readonly Vector3 startPositionInlineFour = new Vector3(-0.3f, 0, FrontDistance + 0.8f);
-    public static readonly Vector3 CentralNear = new Vector3(0, 0, FrontDistance + 1);
+    public static readonly Vector3 startPositionInlineFour = new Vector3(-0.3f, 0.1f, FrontDistance + 0.8f);
+    public static readonly Vector3 CentralNear = new Vector3(0, 0.1f, FrontDistance + 1);
 
     //Rotation to make the objects be oriented towards the user
     public static Quaternion ObjectsRotation = new Quaternion();

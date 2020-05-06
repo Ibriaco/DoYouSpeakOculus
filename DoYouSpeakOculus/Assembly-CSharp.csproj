@@ -452,6 +452,7 @@
     <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_01.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarPBRV2Simple.shader" />
+    <None Include="Assets\Resources\Terrains\Scene3\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Shaders\OculusSampleAlphaHandOutline.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainSmokeShader.shader" />
@@ -464,33 +465,52 @@
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_Mobile_SingleComponentExpressive.shader" />
+    <None Include="Assets\Resources\Terrains\Scene3\VacuumShaders\Vertex Color Shaders\Shaders\Legacy Shaders\Normal-Diffuse.shader" />
     <None Include="Assets\Oculus\SampleFramework\license.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

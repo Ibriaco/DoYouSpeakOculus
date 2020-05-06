@@ -148,10 +148,10 @@
     <None Include="Assets\Oculus\VR\Shaders\OVRVignette.shader" />
     <None Include="Assets\Oculus\VR\Resources\Unlit Transparent Color.shader" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/elshe/Documents/GitHub/DoYouSpeakOculus/DoYouSpeakOculus/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

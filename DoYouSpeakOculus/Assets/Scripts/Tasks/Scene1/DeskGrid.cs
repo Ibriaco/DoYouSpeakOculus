@@ -108,6 +108,8 @@ public class DeskGrid {
         /// </summary>
         private BoxCollider boxCollider;
 
+        private MeshCollider meshCollider;
+
         /// <summary>
         /// Detect whether the user is looking at the cell.
         /// </summary>
@@ -141,7 +143,7 @@ public class DeskGrid {
         /// </summary>
         public Vector3 StackSize {
             get => boxCollider.size;
-            private set => boxCollider.size = value;
+           private set => boxCollider.size = value;
         }
 
         /// <summary>
@@ -182,19 +184,19 @@ public class DeskGrid {
             gameObject.transform.rotation = Quaternion.Euler(0f, tableTransform.rotation.eulerAngles.y, 0f);
 
             //Set the cell scale
-            gameObject.transform.localScale = new Vector3(tableTransform.localScale.x, tableTransform.localScale.y, 1);
+            gameObject.transform.localScale = new Vector3(tableTransform.localScale.x, 4, tableTransform.localScale.z);
 
             //Add the Box Collider to the Game Object
             boxCollider = gameObject.AddComponent<BoxCollider>();
 
             //Add the FocusHandler to detect whether the user is looking at the cell
-           // focusHandler = gameObject.AddComponent<FocusHandler>();
+            // focusHandler = gameObject.AddComponent<FocusHandler>();
 
             //Compute the cell center in local coordinates starting from the global ones
             CenterCoordinates = cellCenter + new Vector3(0, 0.005f, 0);
 
             //Resize the game object and the collider in order to keep each cell grid separate from the others
-            StackSize = 0.9f * new Vector3(cellLength, 0.005f, 1.5f * cellWitdh);
+            StackSize = 0.95f * new Vector3(cellLength, 0, cellWitdh); //0.95
 
             //Make the collider detect collision in order to trigger the methods OnTriggerEnter and OnTriggerExit
             boxCollider.isTrigger = true;
@@ -225,6 +227,10 @@ public class DeskGrid {
             boxCollider.enabled = true;
             //Add the listener to the OnFocusEvent in order to allow the user to pick the objects
             //focusHandler.OnFocusEnterEvent.AddListener(() => StartCoroutine(MoveDownCollider()));
+        }
+
+        internal void DeactivateCell() {
+            boxCollider.enabled = false;
         }
 
         /// <summary>
@@ -260,7 +266,6 @@ public class DeskGrid {
 
                 //Add the object to the stack
                 verticalStack.Add(other.gameObject.name);
-
                 //Compute the new game object position (add its height)
                 float incrementCenterY = other.gameObject.GetComponent<Renderer>().bounds.size.y;
 
@@ -337,14 +342,12 @@ public class DeskGrid {
                     if (!found && grid[cellRow + cellOffset.Item1, cellColumn + cellOffset.Item2].Contains(TargetObject)) {
                         //Stop listen for object positioning event
                         StopListenForPositioning();
-
                         ObjectPooler.GetPooler().GetPooledObject(TargetObject).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                        //Destroy(ObjectPooler.GetPooler().GetPooledObject(TargetObject).GetComponent<ManipulationHandler>());
-                        //Destroy(ObjectPooler.GetPooler().GetPooledObject(TargetObject).GetComponent<NearInteractionGrabbable>());
 
                         found = true;
                         //Trigger the VA position
                         TriggerEvent(Triggers.VAOk);
+                        grid[cellRow + cellOffset.Item1, cellColumn + cellOffset.Item2].DeactivateCell();
                         yield return new WaitForSeconds(3);
                         //Trigger the handler for the next iteration
                         TriggerEvent(Triggers.CorrectPositioning);

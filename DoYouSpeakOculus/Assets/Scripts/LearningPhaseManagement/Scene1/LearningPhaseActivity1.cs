@@ -8,6 +8,7 @@ public class LearningPhaseActivity1 : LearningPhaseManager {
     PoPManager poPManager;
     private AudioContext1 audioContext;
     private DeskGrid grid;
+    private Positions positions;
 
     protected override void LearningPhase() {
         poPManager = (PoPManager)sceneManager;
@@ -23,7 +24,7 @@ public class LearningPhaseActivity1 : LearningPhaseManager {
 
         //1) Introduce desk objects
         foreach (string objectkKey in SceneObjects) {
-            GameObject gameObject = poPManager.ActivateObject(objectkKey, grid.Grid[referencePosition.Item1, referencePosition.Item2].CenterCoordinates,Positions.ObjectsRotation);
+            GameObject gameObject = poPManager.ActivateObject(objectkKey, grid.Grid[referencePosition.Item1+1, referencePosition.Item2+1].CenterCoordinates, Positions.ObjectsRotation);
             yield return poPManager.IntroduceObject(objectkKey);
             poPManager.DeactivateObject(objectkKey);
         }
@@ -34,7 +35,7 @@ public class LearningPhaseActivity1 : LearningPhaseManager {
             List<Tuple<int, int>> offsets =  DeskGrid.Cell.FindCellsToCheck(preposition);
             Tuple<string, DeskGrid.Cell.Prepositions, string> move = new Tuple<string, DeskGrid.Cell.Prepositions, string>(referenceObject.name,preposition, "Rubber");
             foreach (Tuple<int, int> offset in offsets) {
-                GameObject gameObject = poPManager.ActivateObject("Rubber", grid.Grid[1 + offset.Item1, 2 + offset.Item2].CenterCoordinates + new Vector3(0,0.1f,0), Positions.ObjectsRotation);
+                GameObject gameObject = poPManager.ActivateObject("Rubber", grid.Grid[1 + offset.Item1, 2 + offset.Item2].CenterCoordinates + new Vector3(0, 0.1f, 0), Positions.ObjectsRotation);
                // poPManager.EnableOutline("Rubber");
                 yield return poPManager.IntroducePreposition(move);
                 yield return new WaitForSeconds(2);
@@ -44,7 +45,6 @@ public class LearningPhaseActivity1 : LearningPhaseManager {
             }
     
         }
-
         poPManager.DeactivateObject("Book");
 
         //End the learning phase

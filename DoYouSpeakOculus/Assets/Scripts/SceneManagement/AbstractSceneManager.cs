@@ -15,6 +15,8 @@ public abstract class AbstractSceneManager : MonoBehaviour {
     //  Pooler instance
     protected ObjectPooler Pooler;
 
+    private Positions positions;
+
     //  Scene objects information
     protected SceneObjectsToLoad sceneObjects;
 
@@ -35,10 +37,15 @@ public abstract class AbstractSceneManager : MonoBehaviour {
         ParseJson();
         Pooler = ObjectPooler.GetPooler();
         //Select the objects to load
-
+        Vector3 TableVA = new Vector3(-0.115f, 0.815f, 1.8f);
         int scene = GameObject.Find("SceneSelected").GetComponent<SceneSelected>().Scene;
         sceneObjects = settings.scenes[scene];
-        Pooler.FindFloor();
+        if (scene == 0) {
+            Pooler.FindTable();
+        }
+        else {
+            Pooler.FindFloor();
+        }
         //  Instantiate all the scene objects
         LoadObjects();
         //  Set the current AudioContext according to the scene
@@ -47,7 +54,13 @@ public abstract class AbstractSceneManager : MonoBehaviour {
         StartListening();
 
         //  Activate the Virtual Assistant and set it up
-        VirtualAssistant = ActivateObject("VA", Positions.VAPosition, Positions.ObjectsRotation).GetComponent<VirtualAssistantManager>();
+        if(scene != 0) {
+            VirtualAssistant = ActivateObject("VA", Positions.VAPosition, Positions.ObjectsRotation).GetComponent<VirtualAssistantManager>();
+        }
+        else {
+            VirtualAssistant = ActivateObject("VA", TableVA, Positions.ObjectsRotation).GetComponent<VirtualAssistantManager>();
+        }
+        
 
         VirtualAssistant.Setup();
     }

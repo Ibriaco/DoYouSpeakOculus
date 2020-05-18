@@ -31,7 +31,15 @@ public class ObjectPooler : MonoBehaviour {
     internal void FindFloor() {
         Positions.OrientObjects();
     }
-    
+
+    internal void FindTable() {
+        Positions.FindTable();
+    }
+
+    public DeskGrid GetGrid() {
+        return Positions.Grid;
+    }
+
     //Create the objects, deactivate and store them into the data structure
     public void CreateStaticObjects(List<SingleObjectToLoad> staticObjects) {
         foreach (SingleObjectToLoad objectString in staticObjects) {

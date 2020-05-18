@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CheckingPhaseActivity1
     - CheckingPhaseActivity2
     - CheckingPhaseActivity3Basic
+    - DisableCollision
     - EventManager
     - ExitApplication
     - HandedInputSelector
@@ -39,6 +40,8 @@ ScriptsOnlyBuild:
     - OVRManager
     - OVRRaycaster
     - UnityEngine.EventSystems.OVRInputModule
+    Unity.ProBuilder.dll:
+    - UnityEngine.ProBuilder.ProBuilderMesh
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -82,6 +85,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -107,59 +112,63 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 11796}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11836}
+      Script: {instanceID: 11840}
     - Class: 114
       Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12160}
+      Script: {instanceID: 12054}
     - Class: 114
-      Script: {instanceID: 12244}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12432}
+      Script: {instanceID: 12250}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 12506}
     - Class: 114
-      Script: {instanceID: 13296}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 13298}
+      Script: {instanceID: 13236}
     - Class: 114
-      Script: {instanceID: 13468}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13304}
     - Class: 114
-      Script: {instanceID: 14176}
+      Script: {instanceID: 13474}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14182}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14256}
     - Class: 114
-      Script: {instanceID: 14538}
+      Script: {instanceID: 14294}
     - Class: 114
-      Script: {instanceID: 14690}
+      Script: {instanceID: 14360}
     - Class: 114
-      Script: {instanceID: 14854}
+      Script: {instanceID: 14544}
+    - Class: 114
+      Script: {instanceID: 14696}
+    - Class: 114
+      Script: {instanceID: 14860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -211,11 +220,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 89
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -228,29 +237,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13218}
+      Script: {instanceID: 13224}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 13812}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14240}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -260,8 +269,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Scene2.unity:
     - Class: 1
@@ -301,29 +308,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11794}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13218}
+      Script: {instanceID: 13224}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14240}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -339,8 +346,6 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 218
-      Script: {instanceID: 0}
-    - Class: 258
       Script: {instanceID: 0}
     - Class: 1953259897
       Script: {instanceID: 0}
@@ -382,29 +387,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11674}
+      Script: {instanceID: 11678}
     - Class: 114
-      Script: {instanceID: 12090}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 12662}
+      Script: {instanceID: 12668}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13218}
+      Script: {instanceID: 13224}
     - Class: 114
-      Script: {instanceID: 14234}
+      Script: {instanceID: 14240}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 14728}
+      Script: {instanceID: 14734}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -904,6 +909,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9f0a77850cf8154f32ef9d9d4df0d223
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisableCollision
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -2227,7 +2238,7 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
-  - Assets/Scenes/Scene3.unity
-  - Assets/Scenes/Scene2.unity
   - Assets/Scenes/Scene1.unity
-  playerPath: C:/Users/elshe/Desktop/test/terraintest.apk
+  - Assets/Scenes/Scene2.unity
+  - Assets/Scenes/Scene3.unity
+  playerPath: C:/Users/elshe/Desktop/test/presentation.apk

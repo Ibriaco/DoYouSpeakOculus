@@ -18,7 +18,7 @@ public class PoPManager : AbstractSceneManager {
     //  Create the scene objects
     public override void LoadObjects() {
 
-       // Grid = Pooler.GetGrid();
+        Grid = Pooler.GetGrid();
         Pooler.CreateStaticObjects(sceneObjects.staticObjects);
         Pooler.CreateDynamicObjects(sceneObjects.dynamicObjects);
     }
